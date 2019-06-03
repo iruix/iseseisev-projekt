@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="tetromino.jpg">
+    <link rel="manifest" href="manifest.webmanifest">
+    <head>
+        <title>Tetris</title>
+    </head>
+    <body onload="startTime()">
+        <div id="page" class="main-grid">
+        <canvas id="tetris" width="240" height="440" class='loc-center grid-item grid-content'></canvas>
+        <div class="loc-left grid-item grid-content">
+            <br>
+            Score : <div id="score">0</div>
+            <br>
+            <br>
+            <div id="txt"></div>
+        </div>
+        <div class="loc-right grid-item grid-content">
+            <br>
+        <input  class="button black" id="music" type="button" runat="server"  value="Music" onclick="mute()" onclick="change()" />
+        <br>
+        <br>
+        <button onclick="myFunction()" id="rld"> Reload game! </button>
+            <script>
+                function myFunction() 
+                  {
+                      location.reload();
+                  }
+            </script>
+        </div>
+        <script src="tetrominoes.js"></script>
+        <script src="script.js"></script>
+        </div>
+        <audio autoplay class='loc-right grid-item grid-content' id="background_audio" loop>
+            <source src="tetrus.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </body>
+    <footer><p>Braian Jullinen. <a href="" target="_blank">Repositoorium</a></p><input type="submit" id="addButton" class="Btn" value="Lisa seadmesse!"></footer>
+    <style>
+        footer{
+            text-align: center;
+        }
+    </style>
+    </html>
